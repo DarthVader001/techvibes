@@ -1,0 +1,314 @@
+Certainly! Here is the entire CSS code with the modifications for the flex container and layering of images:
+
+```css
+@font-face {
+    font-family: 'DragonLord';
+    src: url('img/Dragonlord-WyJZn.otf') format('opentype');
+}
+
+@keyframes slide_in_left {
+    0% {
+        transform: translateX(-49%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slide_in_right {
+    0% {
+        transform: translateX(50%);
+    }
+
+    100% {
+        transform: translateX(-1%);
+    }
+}
+
+body {
+    font-family: 'DragonLord', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #201b1b;
+}
+
+.header {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 7%;
+    left: 50%;
+    z-index: 10;
+}
+
+.navbar {
+    position: fixed;
+    width: 90%;
+    height: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    border: 3px solid #949494;
+    border-radius: 100px;
+    z-index: 10;
+}
+
+nav.scrolled {
+    background-color: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(0px);
+}
+
+.nav_elements {
+    color: white;
+    font-family: 'DragonLord', sans-serif;
+    letter-spacing: 1vh;
+    font-weight: bold;
+    font-size: 190%;
+    text-decoration: none;
+    border: 2px;
+    border-radius: 4px;
+}
+
+#nav_element1:hover,
+#nav_element2:hover,
+#nav_element3:hover,
+#nav_element4:hover,
+#nav_element5:hover,
+#nav_element6:hover {
+    background-color: ;
+    zoom: 110%;
+    box-shadow: 0px 0px 30px rgb(0, 128, 13);
+}
+
+#nav_element1,
+#nav_element2,
+#nav_element3,
+#nav_element4,
+#nav_element5,
+#nav_element6 {
+    margin-top: 0%;
+    margin-right: 2%;
+    margin-right: 2%;
+}
+
+#logo {
+    width: 13%;
+    margin: 10px;
+}
+
+.dr_strange1 {
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    top: 20%;
+    left: 19.5%;
+    animation: bounce 4s ease-in-out infinite;
+}
+
+.badal {
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    opacity: 90%;
+    top: 50%;
+    scale: 1.49;
+    left: 16.8%;
+}
+
+.circle {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    scale: 0.6;
+    top: -7.5%;
+    left: 17%;
+    animation: spin 30s ease-in infinite;
+}
+
+.aadhacircle {
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    scale: 1.8;
+    left: 10%;
+    top: 70%;
+    animation: spins 50s ease-in-out infinite;
+}
+
+.image-flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+}
+
+.dr_strange1,
+.circle,
+.aadhacircle {
+    max-width: 100%;
+    height: auto;
+}
+
+.circle {
+    z-index: 1;
+}
+
+.dr_strange1 {
+    z-index: 2;
+}
+
+.aadhacircle {
+    z-index: 3;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(5%);
+    }
+
+    50% {
+        transform: translateY(-5%);
+    }
+
+    100% {
+        transform: translateY(5%)
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spins {}
+
+.dr_strange,
+.earth,
+.dr_strange1,
+.badal,
+.circle,
+.aadhacircle {
+    max-width: 100%;
+}
+
+.bouncing_graphics {
+    width: 100%;
+}
+
+@media (max-width: 2500px) {
+    .navbar {
+        height: 8%;
+    }
+
+    .nav_elements {
+        font-size: 50px;
+    }
+
+    #logo {
+        width: 13%;
+        margin: 8px;
+    }
+
+    .header {
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 7%;
+        left: 50%;
+        z-index: 10;
+    }
+}
+
+@media (max-width: 1800px) {
+    .header {
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 7%;
+        left: 50%;
+        z-index: 10;
+    }
+
+    .navbar {
+        height: 6%;
+    }
+
+    .nav_elements {
+        font-size: 40px;
+    }
+
+    #logo {
+        width: 13%;
+        margin: 8px;
+    }
+}
+
+@media (max-width: 1500px) {
+    .header {
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 7%;
+        left: 50%;
+        z-index: 10;
+    }
+
+    .nav_elements {
+        font-size: 30px;
+    }
+
+    #logo {
+        width: 13%;
+        margin: 8px;
+    }
+}
+
+@media (max-width: 1050px) {
+    .header {
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 7%;
+        left: 50%;
+        z-index: 10;
+    }
+
+    .nav_elements {
+        font-size: 20px;
+    }
+
+    #logo {
+        width: 13%;
+        margin: 8px;
+    }
+}
+
+@media (max-width: 760px) {
+    .header {
+        color: white;
+        display: flex;
